@@ -2,7 +2,7 @@
 class Person {
 
     public $name;
-    public $age;
+    private $age;
 
     function __construct($name, $age) {
         $this->name = $name;
@@ -12,4 +12,13 @@ class Person {
     public function printInfo() {
         echo "Имя: ".$this->name.", возраст: ".$this->age;
     }
+
+    public function setName($name) {
+        $this->name = $name;
+    }
+
+    public function setAge($age) {
+        $this->age = $age;
+    }
+
 }

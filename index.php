@@ -9,5 +9,6 @@ function __autoload($class_name)
     return true;
 }
 
-$person1 = new Person("Abdu", 35);
-$person1->printInfo();
+$person = new Person("Abdu", 35);
+$person->printInfo();
+echo $person->name;
