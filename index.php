@@ -21,37 +21,23 @@ spl_autoload_register(function ($class_name)
 //echo $book->getName();
 
 //implement interface
-$db = new Mysql("localhost", 3306, "root", "123");
-$db->connect();
-$db->query("SELECT * FROM users");
-$person = new Person("Abdu", 35);
+//$db = new Mysql("localhost", 3306, "root", "123");
+//$db->connect();
+//$db->query("SELECT * FROM users");
+//$person = new Person("Abdu", 35);
 //$person->printInfo();
 //echo $person->name;
 
-//class A {
-//    public static function who() {
-//        echo __CLASS__;
-//    }
-//    public static function test() {
-//        static::who();
-//    }
-//}
-//
-//class B extends A {
-//    public static function who() {
-//        echo __CLASS__;
-//    }
-//}
-//
-//class C extends A {
-//    public static function who() {
-//        echo __CLASS__;
-//    }
-//}
-//
-//B::test();
-//C::test();
-//C::who();
+//$book = new Book("Чингисхан", 200);
+//echo $book->getName();
 
-$book = new Book("Чингисхан", 200);
-echo $book->getName();
+$pay_acc = new Account(1, "20216123", 10000, Currency::TJS);
+$rec_acc = new Account(1, "20216444", 1000, Currency::TJS);
+$payment = new ESHPayment($pay_acc, $rec_acc, 100, Currency::TJS);
+//pre($payment);
+pre($pay_acc);
+$payment->Pay($pay_acc, $rec_acc);
+pre($pay_acc);
+//pre($payment);
+//$payment->Rollback();
+//pre($payment);
