@@ -1,5 +1,4 @@
 <?php
-include "interface/DB.interface.php";
 
 class Mysql implements DB {
     public $host;
