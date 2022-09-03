@@ -9,34 +9,16 @@ spl_autoload_register(function ($class_name)
     return true;
 });
 
-$person = new Person("Abdu", 35);
+
+//$person = new Person("Abdu", 35);
 //$person->printInfo();
 //echo $person->name;
 
-//class A {
-//    public static function who() {
-//        echo __CLASS__;
-//    }
-//    public static function test() {
-//        static::who();
-//    }
-//}
-//
-//class B extends A {
-//    public static function who() {
-//        echo __CLASS__;
-//    }
-//}
-//
-//class C extends A {
-//    public static function who() {
-//        echo __CLASS__;
-//    }
-//}
-//
-//B::test();
-//C::test();
-//C::who();
+//Abstract class
+//$book = new Book("Чингисхан", 200);
+//echo $book->getName();
 
-$book = new Book("Чингисхан", 200);
-echo $book->getName();
+//implement interface
+$db = new Mysql("localhost", 3306, "root", "123");
+$db->connect();
+$db->query("SELECT * FROM users");
