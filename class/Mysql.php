@@ -1,5 +1,4 @@
 <?php
-
 class Mysql implements DB {
     public $host;
     public $port;
